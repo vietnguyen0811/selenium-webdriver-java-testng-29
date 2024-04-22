@@ -24,13 +24,13 @@ public class Topic_04_Find_Element {
     @Test
     public void TC_01() {
         driver.get("http://live.techpanda.org/");
-       driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
-        //driver.findElement(By.xpath("//a[text()='My Account']/ancestor::div[@class='footer']")).click();
+        //driver.findElement(By.xpath("//div[@class='footer']//a[text()='My Account']")).click();
+        driver.findElement(By.xpath("//a[text()='My Account']/ancestor::div[@class='footer']")).click();
 
         driver.get("https://demo.nopcommerce.com");
         driver.findElement(By.xpath("//ul[@class='top-menu notmobile']//a[text()='Computers ']")).click();
-        driver.findElement(By.xpath("//ul[@class='sublist']//a[text()='Desktops ']")).click();
-        //driver.findElement(By.xpath("//ul[@class='top-menu notmobile']//a[contains(text(),'Desktops ')]")).click();
+        //driver.findElement(By.xpath("//ul[@class='sublist']//a[text()='Desktops ']")).click();
+        driver.findElement(By.xpath("//ul[@class='sublist']//a[contains(text(),'Desktops ')]")).click();
         //driver.findElement(By.xpath("//button[starts-with(@id,'empty_cart')]")).click();
         //driver.findElement(By.xpath("//button[contains(@id,'empty_cart')]")).click();
     }
